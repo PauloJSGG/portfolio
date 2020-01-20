@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
-import { useSpring, animated } from 'react-spring'
+import { useSpring, animated, config } from 'react-spring'
 import './App.css'
 
 
 function App() {
   const [state, toggle] = useState(true)
-  const { x } = useSpring({ from: { x: 0 }, x: state ? 1 : 0, config: { duration: 1000 } })
+  const { x } = useSpring({ from: { x: 0 }, x: state ? 1 : 0, config: config.default, })
   return (
     <div className="app-container">
       <div onClick={() => toggle(!state)}>
