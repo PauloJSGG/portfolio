@@ -2,7 +2,7 @@ import { render } from 'react-dom'
 import React, { useRef } from 'react'
 import clamp from 'lodash-es/clamp'
 import { useSprings, animated } from 'react-spring'
-import { useGesture } from 'react-use-gesture'
+import { useDrag } from 'react-use-gesture'
 import './App.css'
 
 const pages = [
@@ -16,7 +16,7 @@ const pages = [
 function App() {
   const index = useRef(0)
   const [props, set] = useSprings(pages.length, i => ({ x: i * window.innerWidth, sc: 1, display: 'block' }))
-  const bind = useGesture(({ down, delta: [xDelta], direction: [xDir], distance, cancel }) => {
+  const bind = useDrag(({ down, delta: [xDelta], direction: [xDir], distance, cancel }) => {
     if (down && distance > window.innerWidth / 2)
       cancel((index.current = clamp(index.current + (xDir > 0 ? -1 : 1), 0, pages.length - 1)))
     set(i => {
