@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useSpring,useTrail, animated, to } from 'react-spring'
 import { useDrag, useGesture } from 'react-use-gesture'
 import CasualPhoto from '../assets/Casual.JPG'
+
+import ascii from '../assets/ascii'
 import './Home.scss'
 
 const calcX = (y, ly) => -(y - ly - window.innerHeight / 2) / 20
@@ -86,6 +88,12 @@ const Home = (props) => {
           <svg width="100%" height="100%" >
             <circle  cx="10" cy="8" r="5" fill="rgb(9.4%, 88.2%, 0%)"/>
           </svg>
+        </div>
+        <div className="body">
+          <div className="ascii">
+            {ascii.map(item => <span>{item}</span>)}
+          </div>
+
         </div>
       </div>
 
