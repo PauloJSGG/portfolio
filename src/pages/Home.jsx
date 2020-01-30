@@ -73,7 +73,26 @@ const Home = (props) => {
           </animated.h1>
         ))}
       </div> */}
-      <animated.div
+
+
+      <div className='header'>
+        <div className='icons'>
+          <svg width="100%" height="100%" >
+            <circle  cx="10" cy="8" r="5" fill="rgb(79.2%, 0%, 0%)"/>
+          </svg>
+          <svg width="100%" height="100%" >
+            <circle  cx="10" cy="8" r="5" fill="rgb(96.4%, 89.9%, 0%)"/>
+          </svg>
+          <svg width="100%" height="100%" >
+            <circle  cx="10" cy="8" r="5" fill="rgb(9.4%, 88.2%, 0%)"/>
+          </svg>
+        </div>
+      </div>
+
+
+
+
+      {/* <animated.div
         ref={domTarget}
         className={`${drag ? 'dragging' : ''}`}
         style={{ transform: 'perspective(600px)', x, y, scale: to([scale, zoom], (s, z) => s + z), rotateX, rotateY, rotateZ }}
@@ -89,7 +108,7 @@ const Home = (props) => {
             ))}
           </animated.div>
       </animated.div>
-    </animated.div>
+    </animated.div> */}
 
       {/* <div className='body'>
         <img
