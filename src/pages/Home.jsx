@@ -89,11 +89,17 @@ const Home = (props) => {
             <circle  cx="10" cy="8" r="5" fill="rgb(9.4%, 88.2%, 0%)"/>
           </svg>
         </div>
-        <div className="body">
+      </div>
+      <div className="body">
+        <div className="container">
           <div className="ascii">
             {ascii.map(item => <span>{item}</span>)}
           </div>
-
+        </div>
+        <div className="container container--center">
+          <div className="test">
+            <h1>PAULO GONÇALVES</h1>
+          </div>
         </div>
       </div>
 

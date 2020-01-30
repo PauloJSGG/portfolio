@@ -4,9 +4,10 @@ import './Social.scss'
 const Social = (props) => {
   return (
     <div className='social-container'>
-      <div className='header'>
+      <iframe src="https://inversus.me" height="100%" width="100%"></iframe>
+      {/* <div className='header'>
         <h1>Social</h1>
-      </div>
+      </div> */}
     </div>
   )
 }
