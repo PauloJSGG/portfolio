@@ -32,6 +32,36 @@
       &--center{
         justify-content: center;
       }
+
+      .test{
+        display: inline-block;
+        width: 0;
+        // position: relative;
+        // top: 50%;
+        // width: 24em;
+        // margin: 0 auto;
+        border-right: 2px solid black;
+        font-size: 180%;
+        // text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        // transform: translateY(-50%);
+        animation: typewriter 2s steps(30) 0s 1 normal both,
+                   blinkTextCursor 500ms steps(20) infinite normal;
+    }
+
+      // .anim-typewriter{
+      //   animation: typewriter 4s steps(44) 1s 1 normal both,
+      //              blinkTextCursor 500ms steps(44) infinite normal;
+      // }
+        @keyframes typewriter{
+          from{width: 0;}
+          to{width: 100%;}
+        }
+      @keyframes blinkTextCursor{
+        from{border-right-color: black;}
+        to{border-right-color: transparent;}
+      }
     }
     .ascii{
       height: 50%;

@@ -97,8 +97,8 @@ const Home = (props) => {
           </div>
         </div>
         <div className="container container--center">
-          <div className="test">
-            <h1>PAULO GONÇALVES</h1>
+          <div>
+            <span className="test anim-typewriter">PAULO GONÇALVES</span>
           </div>
         </div>
       </div>
