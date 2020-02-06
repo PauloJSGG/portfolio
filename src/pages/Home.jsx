@@ -37,6 +37,7 @@ const Home = (props) => {
 
   const [{ wheelY }, setWheel] = useSpring(() => ({ wheelY: 0 }))
   const [drag, setDrag] = React.useState(false)
+  const [text, setText] = React.useState(ascii)
 
   const bind = useGesture(
     {
@@ -92,8 +93,8 @@ const Home = (props) => {
       </div>
       <div className="body">
         <div className="container">
-          <div className="ascii">
-            {ascii.map(item => <span>{item}</span>)}
+          <div className="ascii" >
+            {text.map(item => <span>{item}</span>)}
           </div>
         </div>
         <div className="container container--center">
